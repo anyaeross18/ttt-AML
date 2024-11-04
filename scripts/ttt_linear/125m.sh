@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DATA_PATH=TODO
+DATA_PATH=/content/drive/MyDrive/llama-2-pile
 DATA_NAME="the_pile" # "books3" 
 
 # Product should equal 0.5 million
@@ -8,8 +8,8 @@ SEQ_LEN=2048
 BS=256
 
 # Experiment details
-EXP_NAME=TODO
-EXP_DIR=TODO
+EXP_NAME=linear_125m
+EXP_DIR=/content/drive/MyDrive/linear_125m
 
 sudo mkdir -p /${EXP_DIR}/${EXP_NAME} && sudo chmod -R 777 ${EXP_DIR}/${EXP_NAME};
 cd ../..
