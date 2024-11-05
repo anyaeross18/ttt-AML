@@ -38,7 +38,7 @@ from ttt.infra.jax_utils import (
 
 FLAGS, FLAGS_DEF = mlxu.define_flags_with_default(
     seed=0,
-    mesh_dim="-1,64,1",
+    mesh_dim="-1,1,1",
     dtype="fp32",
     eval_mode=False,
     load_part="trainstate",
