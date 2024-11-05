@@ -11,8 +11,8 @@ BS=256
 EXP_NAME="linear_125m"
 EXP_DIR="/content/drive/MyDrive/linear_125m"
 
-sudo mkdir -p /${EXP_DIR}/${EXP_NAME} && sudo chmod -R 777 ${EXP_DIR}/${EXP_NAME};
-cd ../..
+#sudo mkdir -p /${EXP_DIR}/${EXP_NAME} && sudo chmod -R 777 ${EXP_DIR}/${EXP_NAME};
+#cd ../..
 
 python3 /content/ttt-AML/ttt/train.py \
         --mesh_dim='!-1,1,1' \
