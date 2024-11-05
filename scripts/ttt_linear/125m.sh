@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DATA_PATH=/content/drive/MyDrive/llama-2-pile
+DATA_PATH=/content/drive/MyDrive/llama-2-books3
 DATA_NAME="the_pile" # "books3" 
 
 # Product should equal 0.5 million
