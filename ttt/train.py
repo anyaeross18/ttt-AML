@@ -44,7 +44,7 @@ FLAGS, FLAGS_DEF = mlxu.define_flags_with_default(
     load_part="trainstate",
     total_steps=100,
     load_model_config="125m-TTT",
-    update_model_config=dict(seq_modeling_block='ttt_linear', ttt_base_lr=1.0),
+    update_model_config="",
     save_checkpoint_freq=100,
     save_milestone_freq=0,
     dataset_path="/content/drive/MyDrive/llama-2-books3",
