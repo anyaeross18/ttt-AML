@@ -1,15 +1,15 @@
 #!/bin/bash
 
-DATA_PATH=/content/drive/MyDrive/llama-2-books3
-DATA_NAME="the_pile" # "books3" 
+DATA_PATH="/content/drive/MyDrive/govReport"
+DATA_NAME="kmfoda/gov_report"
 
 # Product should equal 0.5 million
 SEQ_LEN=2048
 BS=256
 
 # Experiment details
-EXP_NAME=linear_125m
-EXP_DIR=/content/drive/MyDrive/linear_125m
+EXP_NAME="linear_125m"
+EXP_DIR="/content/drive/MyDrive/linear_125m"
 
 sudo mkdir -p /${EXP_DIR}/${EXP_NAME} && sudo chmod -R 777 ${EXP_DIR}/${EXP_NAME};
 cd ../..
