@@ -292,6 +292,13 @@ def initialize_or_resume(
         train_state, restored_params = checkpointer.load_trainstate_checkpoint(
             ckpt_resume_dir, train_state_shapes, shard_fns
         )
+        
+        # Add debugging to check if parameters are restored
+        if restored_params is not None:
+            master_print(f"Model weights loaded successfully from {ckpt_resume_dir}.")
+        else:
+            master_print(f"No model weights loaded from {ckpt_resume_dir}, initializing from scratch.")
+
 
         if FLAGS.load_part == "trainstate":
             start_step = int(jax.device_get(train_state.step)) + 1
@@ -309,9 +316,11 @@ def initialize_or_resume(
 
     if train_state is None and restored_params is None:
         train_state = sharded_init_fn(next_rng())
+        master_print("Initializing model from scratch.")
     elif train_state is None and restored_params is not None:
         train_state = sharded_create_trainstate_from_params(restored_params)
         del restored_params
+        master_print("Model initialized with restored weights.")
 
     return start_step, train_state, train_loader
 
