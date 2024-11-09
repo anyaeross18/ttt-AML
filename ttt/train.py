@@ -58,8 +58,8 @@ FLAGS, FLAGS_DEF = mlxu.define_flags_with_default(
     checkpointer=StreamingCheckpointer.get_default_config(),
     exp_dir="/content/drive/MyDrive/ttt-linear-125m-books-2k",
     exp_name="linear_125m_gov_report",
-    resume_exp_name="/content/drive/MyDrive/ttt-linear-125m-books-2k/linear_125m_gov_report/step_100",
-    resume_step="",
+    resume_exp_name="/content/drive/MyDrive/ttt-linear-125m-books-2k/linear_125m_gov_report",
+    resume_step="100",
     jax_distributed=JaxDistributedConfig.get_default_config(),
     is_rollback_reshuffle=False,
 )
