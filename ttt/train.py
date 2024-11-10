@@ -42,7 +42,7 @@ FLAGS, FLAGS_DEF = mlxu.define_flags_with_default(
     dtype="fp32",
     eval_mode=False,
     load_part="trainstate_params",
-    total_steps=1000,
+    total_steps=100,
     load_model_config="125m-TTT",
     update_model_config="dict(seq_modeling_block='ttt_linear', ttt_base_lr=1.0)",
     save_checkpoint_freq=100,
