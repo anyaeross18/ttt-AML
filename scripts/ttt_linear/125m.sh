@@ -17,9 +17,9 @@ cd ../..
 PYTHONPATH="/content/ttt-AML" python3 /content/ttt-AML/ttt/train.py \
         --mesh_dim='!-1,1,1' \
         --dtype='fp32' \
-        --total_steps=4800 \
-        --save_checkpoint_freq=1000 \
-        --save_milestone_freq=2000 \
+        --total_steps=100 \
+        --save_checkpoint_freq=100 \
+        --save_milestone_freq=100 \
         --load_model_config='125m-TTT' \
         --update_model_config="dict(seq_modeling_block='ttt_linear', ttt_base_lr=1.0)" \
         --dataset_path=${DATA_PATH} \
@@ -28,9 +28,9 @@ PYTHONPATH="/content/ttt-AML" python3 /content/ttt-AML/ttt/train.py \
         --global_batch_size=${BS} \
         --optimizer.type='adamw' \
         --optimizer.adamw_optimizer.weight_decay=0.1 \
-        --optimizer.adamw_optimizer.lr=3e-3 \
-        --optimizer.adamw_optimizer.end_lr=1e-5 \
-        --optimizer.adamw_optimizer.lr_warmup_steps=480 \
-        --optimizer.adamw_optimizer.lr_decay_steps=4800 \
+        --optimizer.adamw_optimizer.lr=1e-4 \
+        --optimizer.adamw_optimizer.end_lr=9e-5 \
+        --optimizer.adamw_optimizer.lr_warmup_steps=100 \
+        --optimizer.adamw_optimizer.lr_decay_steps=10000 \
         --exp_dir=${EXP_DIR} \
         --exp_name=${EXP_NAME}
