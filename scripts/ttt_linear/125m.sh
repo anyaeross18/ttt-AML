@@ -8,8 +8,8 @@ SEQ_LEN=2048
 BS=256
 
 # Experiment details
-EXP_NAME="linear_125m"
-EXP_DIR="/content/drive/MyDrive/linear_125m"
+EXP_NAME="linear_125m_gov_report"
+EXP_DIR="/content/drive/MyDrive/ttt-linear-125m-books-2k"
 
 mkdir -p "/${EXP_DIR}/${EXP_NAME}" && chmod -R 777 "/${EXP_DIR}/${EXP_NAME}";
 cd ../..
