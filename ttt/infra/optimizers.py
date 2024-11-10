@@ -115,21 +115,22 @@ class AdamWOptimizerFactory(object):
     @staticmethod
     def get_default_config(updates=None):
         config = ConfigDict()
-        config.init_lr = 0.0
-        config.end_lr = 1e-5  # EasyLM's previous default: 0.001
-        config.lr = 0.01
+        config.init_lr = 1e-4
+        config.end_lr = 1e-4    
+        config.lr = 1e-4        
         config.lr_warmup_steps = 2000
         config.lr_decay_steps = 500000
         config.b1 = 0.9
         config.b2 = 0.95
         config.clip_gradient = 1.0
-        config.weight_decay = 0.1  # EasyLM previous default: 1e-4
+        config.weight_decay = 0.1  # Keep the default weight decay
         config.bf16_momentum = False
         config.multiply_by_parameter_scale = False
-
+    
         if updates is not None:
             config.update(ConfigDict(updates).copy_and_resolve_references())
         return config
+
 
     @classmethod
     def get_optimizer(cls, config, weight_decay_mask=None):
