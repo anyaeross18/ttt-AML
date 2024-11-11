@@ -1,7 +1,7 @@
 # Fine-tuning the TTT Model
 
 ##   Abstract
-Despite its promise, the (Test Time Training) TTT model is relatively untested across diverse domains, with only seven9
+Despite its promise, the (Test Time Training) TTT model is relatively untested across diverse domains, with only seven
 citations as of now. The scarcity of research applying TTT to domain-specific datasets, especially
 those with long sequences, creates an opportunity to both validate and potentially expand the model’s
 utility in complex, real-world applications. With a pre-trained open-source model built on the Pile
