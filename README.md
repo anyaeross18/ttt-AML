@@ -8,7 +8,6 @@
 | [**Inference Benchmark**](https://github.com/test-time-training/ttt-lm-kernels)
 
 ## Abstract
-
 Self-attention performs well in long context but has quadratic complexity. Existing RNN layers
 have linear complexity, but their performance in long context is limited by the expressive power
 of their hidden state. We propose a new class of sequence modeling layers with linear complexity
